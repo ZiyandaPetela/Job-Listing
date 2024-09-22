@@ -22,11 +22,7 @@ function App() {
                   Employee Profile
                 </Link>
               </li>
-              <li>
-                <Link to="/employer-profile" className="text-white">
-                  Employer Profile
-                </Link>
-                </li>
+              
             </ul>
           </nav>
         </header>
