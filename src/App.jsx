@@ -31,7 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<h2 className="text-center mt-8">Welcome to the Job Listing Project</h2>} />
           <Route path="/employee-profile" element={<EmployeeProfileForm />} />
-          <Route path="/employer-profile" element={<EmployerProfileForm />} />
+         
         </Routes>
         
       </div>
