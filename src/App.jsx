@@ -1,11 +1,45 @@
 /* eslint-disable no-unused-vars */
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import EmployeeProfileForm from "../src/Components/EmployeeProfileForm"; // Import EmployeeProfileForm from employees.jsx
+import EmployerProfileForm from "../src/Components/EmployerProfileForm";
 
 function App() {
   return (
-    <>
-      <h4 className=" bg-green-500">Our Job listing project</h4>
-    </>
+    <Router>
+      <div className="bg-gray-100 min-h-screen">
+        <header className="bg-blue-500 p-4">
+          
+          <nav>
+            <ul className="flex space-x-4 mt-2">
+              <li>
+                <Link to="/" className="text-white">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/employee-profile" className="text-white">
+                  Employee Profile
+                </Link>
+              </li>
+              <li>
+                <Link to="/employer-profile" className="text-white">
+                  Employer Profile
+                </Link>
+                </li>
+            </ul>
+          </nav>
+        </header>
+
+        {/* Define Routes */}
+        <Routes>
+          <Route path="/" element={<h2 className="text-center mt-8">Welcome to the Job Listing Project</h2>} />
+          <Route path="/employee-profile" element={<EmployeeProfileForm />} />
+          <Route path="/employer-profile" element={<EmployerProfileForm />} />
+        </Routes>
+        
+      </div>
+    </Router>
   );
 }
 
