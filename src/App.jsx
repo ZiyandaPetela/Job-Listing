@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import EmployeeProfileForm from "../src/Components/EmployeeProfileForm"; // Import EmployeeProfileForm from employees.jsx
 import EmployerProfileForm from "../src/Components/EmployerProfileForm";
 
 function App() {
@@ -17,11 +16,8 @@ function App() {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to="/employee-profile" className="text-white">
-                  Employee Profile
-                </Link>
-              </li>
+              
+              
               <li>
                 <Link to="/employer-profile" className="text-white">
                   Employer Profile
@@ -34,7 +30,6 @@ function App() {
         {/* Define Routes */}
         <Routes>
           <Route path="/" element={<h2 className="text-center mt-8">Welcome to the Job Listing Project</h2>} />
-          <Route path="/employee-profile" element={<EmployeeProfileForm />} />
           <Route path="/employer-profile" element={<EmployerProfileForm />} />
         </Routes>
         
