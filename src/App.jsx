@@ -11,25 +11,21 @@ function App() {
           
           <nav>
             <ul className="flex space-x-4 mt-2">
-              <li>
-                <Link to="/" className="text-white">
-                  Home
-                </Link>
-              </li>
               
               
-              <li>
+              
+              {/* <li>
                 <Link to="/employer-profile" className="text-white">
                   Employer Profile
                 </Link>
-                </li>
+                </li> */}
             </ul>
           </nav>
         </header>
 
         {/* Define Routes */}
         <Routes>
-          <Route path="/" element={<h2 className="text-center mt-8">Welcome to the Job Listing Project</h2>} />
+       
           <Route path="/employer-profile" element={<EmployerProfileForm />} />
         </Routes>
         
