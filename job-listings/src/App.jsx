@@ -5,7 +5,6 @@ import EmployeeLoginpage from "./Pages/EmployeeLoginpage";
 function App() {
   return (
     <>
-      
     </>
   );
 }
