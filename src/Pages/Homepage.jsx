@@ -68,16 +68,19 @@ function Homepage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Job Card */}
             {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-xl font-bold mb-4">Senior UI/UX Designer</h3>
-                <p className="text-gray-600 mb-4">Remote</p>
-                <button className="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-700">
-                  Apply Now
-                </button>
-              </div>
+             <div
+             key={index}
+             className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full max-w-sm mb-6"
+           >
+             <h3 className="text-xl font-bold mb-4">Senior UI/UX Designer</h3>
+             <p className="text-gray-600 mb-4">Remote</p>
+             <button
+               onClick={handleApplyClick}
+               className="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-700"
+             >
+               Apply Now
+             </button>
+           </div>
             ))}
           </div>
         </div>
