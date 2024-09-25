@@ -14,6 +14,7 @@ function Homepage() {
   return (
     <div className="bg-gray-100 font-sans leading-normal tracking-normal">
       {/* Navbar Section */}
+      
       <nav className="bg-black text-white p-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="text-lg font-bold">
