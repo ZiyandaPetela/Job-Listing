@@ -1,0 +1,106 @@
+[
+    {
+      "name": "Catherine Earnshaw",
+      "position": "Professional Position",
+      "email": "example@example.com",
+      "website": "www.example.com",
+      "phone": "+00 123 4567890",
+      "school": [
+        {
+          "year": "2020 - 2025",
+          "degree": "Master of Business Administration",
+          "university": "University A"
+        },
+        {
+          "year": "2020 - 2025",
+          "degree": "Master of Business Administration",
+          "university": "University B"
+        }
+      ],
+      "experience": [
+        {
+          "year": "2020 - 2025",
+          "role": "Physical Therapist",
+          "company": "Company A"
+        },
+        {
+          "year": "2020 - 2025",
+          "role": "Physical Therapy Assistant",
+          "company": "Company B"
+        },
+        {
+          "year": "2020 - 2025",
+          "role": "Nurse Practitioner",
+          "company": "Company C"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Aborro blandit",
+          "level": 4
+        },
+        {
+          "name": "Malagna aliquam",
+          "level": 3
+        },
+        {
+          "name": "Eaqui consent quisquam",
+          "level": 5
+        },
+        {
+          "name": "Minim veniam",
+          "level": 4
+        }
+      ]
+    },
+    {
+      "name": "John Doe",
+      "position": "Senior Software Engineer",
+      "email": "john.doe@example.com",
+      "website": "www.johndoe.com",
+      "phone": "+00 987 6543210",
+      "school": [
+        {
+          "year": "2010 - 2014",
+          "degree": "Bachelor of Computer Science",
+          "university": "Tech University"
+        },
+        {
+          "year": "2015 - 2017",
+          "degree": "Master of Software Engineering",
+          "university": "Tech University"
+        }
+      ],
+      "experience": [
+        {
+          "year": "2017 - 2020",
+          "role": "Software Engineer",
+          "company": "Tech Corp"
+        },
+        {
+          "year": "2020 - 2023",
+          "role": "Lead Developer",
+          "company": "Innovative Solutions"
+        }
+      ],
+      "skills": [
+        {
+          "name": "JavaScript",
+          "level": 5
+        },
+        {
+          "name": "React",
+          "level": 5
+        },
+        {
+          "name": "Node.js",
+          "level": 4
+        },
+        {
+          "name": "Python",
+          "level": 5
+        }
+      ]
+    }
+  ]
+  

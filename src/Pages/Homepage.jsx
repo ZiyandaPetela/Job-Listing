@@ -1,30 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function Homepage() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleApplyClick = () => {
+    navigate('/apply'); // Navigate to the application form page
+  };
+
   return (
-    
-    
     <div className="bg-gray-100 font-sans leading-normal tracking-normal">
-      
-    {/* Navbar Section */}
-    <nav className="bg-black text-white p-4">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold">
-          <Link to="/" className="text-white">JobScout</Link>
+      {/* Navbar Section */}
+      <nav className="bg-black text-white p-4">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <div className="text-lg font-bold">
+            <Link to="/" className="text-white">JobScout</Link>
+          </div>
+          <div className="hidden md:flex space-x-8">
+            <Link to="/find-job" className="hover:text-gray-300">Find Job</Link>
+            <Link to="/hiring" className="hover:text-gray-300">Hiring</Link>
+            <Link to="/community" className="hover:text-gray-300">Community</Link>
+            <Link to="/faq" className="hover:text-gray-300">FAQ</Link>
+          </div>
+          <div className="flex space-x-4">
+  <Link to="/EmployeeLoginpage" className="hover:text-gray-300">Sign in</Link>
+  <Link to="/EmployeeSignupPage" className="bg-white text-black px-4 py-2 rounded hover:bg-gray-300">Create Account</Link>
+</div>
         </div>
-        <div className="hidden md:flex space-x-8">
-          <Link to="/find-job" className="hover:text-gray-300">Find Job</Link>
-          <Link to="/hiring" className="hover:text-gray-300">Hiring</Link>
-          <Link to="/community" className="hover:text-gray-300">Community</Link>
-          <Link to="/faq" className="hover:text-gray-300">FAQ</Link>
-        </div>
-        <div className="flex space-x-4">
-          <Link to="/signin" className="hover:text-gray-300">Sign in</Link>
-          <Link to="/create-account" className="bg-white text-black px-4 py-2 rounded hover:bg-gray-300">Create Account</Link>
-        </div>
-      </div>
-    </nav>
+      </nav>
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
@@ -35,8 +39,7 @@ function Homepage() {
                 Find Your Next Gig With Our Job Listing Platform.
               </h1>
               <p className="mb-6">
-                Explore thousands of job opportunities and boost your career with our job
-                listing platform.
+                Explore thousands of job opportunities and boost your career with our job listing platform.
               </p>
               <form className="flex flex-wrap mb-4">
                 <input
@@ -50,7 +53,6 @@ function Homepage() {
               </form>
             </div>
             <div className="md:w-1/2">
-              {/* Replace with an image */}
               <img
                 className="w-full h-auto"
                 src="https://plus.unsplash.com/premium_photo-1661630555383-c52c52b66fa4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNpdHRpbmclMjBvbiUyMGZsb29yfGVufDB8fDB8fHww"
@@ -66,21 +68,20 @@ function Homepage() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">2000+ Dream Job Openings</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Job Card */}
             {[...Array(6)].map((_, index) => (
-             <div
-             key={index}
-             className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full max-w-sm mb-6"
-           >
-             <h3 className="text-xl font-bold mb-4">Senior UI/UX Designer</h3>
-             <p className="text-gray-600 mb-4">Remote</p>
-             <button
-               onClick={handleApplyClick}
-               className="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-700"
-             >
-               Apply Now
-             </button>
-           </div>
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full max-w-sm mb-6"
+              >
+                <h3 className="text-xl font-bold mb-4">Senior UI/UX Designer</h3>
+                <p className="text-gray-600 mb-4">Remote</p>
+                <button
+                  onClick={handleApplyClick}
+                  className="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-700"
+                >
+                  Apply Now
+                </button>
+              </div>
             ))}
           </div>
         </div>

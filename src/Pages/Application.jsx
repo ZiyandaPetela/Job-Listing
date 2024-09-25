@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; // Import axios
 
 function Application() {
   const [formData, setFormData] = useState({
@@ -17,11 +18,19 @@ function Application() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here, you would send the form data to a server, for now we can log it
-    console.log("Form Submitted", formData);
-    alert("Application Submitted! Thank you.");
+
+    try {
+      // POST the form data to the JSON server
+      const response = await axios.post('/employee.json', formData);
+
+      console.log("Form Submitted", response.data);
+      alert("Application Submitted! Thank you.");
+    } catch (error) {
+      console.error("There was an error submitting the form!", error);
+      alert("Error submitting the application.");
+    }
   };
 
   return (
