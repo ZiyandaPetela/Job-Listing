@@ -6,9 +6,9 @@ function Homepage() {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleApplyClick = () => {
-    navigate('/apply'); // Navigate to the application form page
+    navigate('/Application'); // Navigate to the application form page
+  
   };
-
   return (
     <div className="bg-gray-100 font-sans leading-normal tracking-normal">
       {/* Navbar Section */}
@@ -18,12 +18,12 @@ function Homepage() {
             <Link to="/" className="text-white">JobScout</Link>
           </div>
           <div className="hidden md:flex space-x-8">
-            <Link to="/find-job" className="hover:text-gray-300">Find Job</Link>
+            <Link to="/JoblistingPage" className="hover:text-gray-300" >Find Job</Link>
             <Link to="/hiring" className="hover:text-gray-300">Hiring</Link>
             <Link to="/community" className="hover:text-gray-300">Community</Link>
             <Link to="/faq" className="hover:text-gray-300">FAQ</Link>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex items-center space-x-4">
   <Link to="/EmployeeLoginpage" className="hover:text-gray-300">Sign in</Link>
   <Link to="/EmployeeSignupPage" className="bg-white text-black px-4 py-2 rounded hover:bg-gray-300">Create Account</Link>
 </div>
