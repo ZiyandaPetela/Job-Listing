@@ -1,7 +1,16 @@
 import React from "react";
 import employeeLoginImg from "/images/employeeLoginImg.jpg";
+import { Link, useNavigate } from "react-router-dom";
 
 const EmployeeLoginpage = () => {
+  const navigate = useNavigate();
+
+  const submitLoginForm = (e) => {
+    e.preventDefault();
+    navigate('/')
+
+  };
+
   return (
     <div className="lg:grid grid-cols-[40fr_60fr] ">
       <div className="lg:block xs:hidden">
@@ -44,7 +53,7 @@ const EmployeeLoginpage = () => {
           <div className=" flex justify-end text-secondary hover:cursor-pointer">
             Recover password
           </div>
-          <button className=" text-white bg-black w-full py-3 rounded">
+          <button onClick={submitLoginForm} className=" text-white bg-black w-full py-3 rounded">
             Login
           </button>
         </form>

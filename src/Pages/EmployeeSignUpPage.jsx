@@ -1,8 +1,15 @@
 import React from "react";
 import { IoCloudUploadSharp } from "react-icons/io5";
 import employeeSignUpImg from "/images/employeeSignUpImg.jpg";
+import { Link, useNavigate } from "react-router-dom";
 
 const EmployeeSignUpPage = () => {
+  const navigate = useNavigate();
+
+  const submitSignUpForm = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
   return (
     <div className=" lg:grid grid-cols-[40fr_60fr] ">
       <div className=" lg:block xs:hidden">
@@ -155,7 +162,7 @@ const EmployeeSignUpPage = () => {
                 Privacy Policy.
               </span>
             </div>
-            <button className=" text-white bg-black w-full md:py-3 sm:py-2 xs:py-3 rounded">
+            <button onClick={submitSignUpForm} className=" text-white bg-black w-full md:py-3 sm:py-2 xs:py-3 rounded">
               Register
             </button>
           </div>

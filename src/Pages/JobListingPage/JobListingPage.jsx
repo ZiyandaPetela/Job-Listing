@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "/images/logo-min-white.svg";
 import { IoMdNotifications } from "react-icons/io";
 import { IoMdSettings } from "react-icons/io";
@@ -14,7 +15,10 @@ const JobListingPage = () => {
     <div className="  ">
       <div className="flex justify-between items-center text-xl text-accent  bg-black px-9 border-b-2 border-accent ">
         <div className="hover:cursor-pointer">
-          <img src={logo} alt="logo" srcset="" />
+          <Link to='/'>
+            {" "}
+            <img src={logo} alt="logo" srcset="" />
+          </Link>
         </div>
         <div className="flex gap-10 hover:cursor-pointer">
           <div className=" hover:text-white hover:font-semibold">Find Job</div>
