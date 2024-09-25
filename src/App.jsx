@@ -1,11 +1,15 @@
-/* eslint-disable no-unused-vars */
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Homepage from "../src/Pages/Homepage"
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Homepage from '../src/Pages/Homepage';
+
 function App() {
   return (
-    <>
-     <Homepage/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        
+      </Routes>
+    </Router>
   );
 }
 

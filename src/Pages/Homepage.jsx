@@ -1,8 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Homepage() {
   return (
+    
+    
     <div className="bg-gray-100 font-sans leading-normal tracking-normal">
+      
+    {/* Navbar Section */}
+    <nav className="bg-black text-white p-4">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <div className="text-lg font-bold">
+          <Link to="/" className="text-white">JobScout</Link>
+        </div>
+        <div className="hidden md:flex space-x-8">
+          <Link to="/find-job" className="hover:text-gray-300">Find Job</Link>
+          <Link to="/hiring" className="hover:text-gray-300">Hiring</Link>
+          <Link to="/community" className="hover:text-gray-300">Community</Link>
+          <Link to="/faq" className="hover:text-gray-300">FAQ</Link>
+        </div>
+        <div className="flex space-x-4">
+          <Link to="/signin" className="hover:text-gray-300">Sign in</Link>
+          <Link to="/create-account" className="bg-white text-black px-4 py-2 rounded hover:bg-gray-300">Create Account</Link>
+        </div>
+      </div>
+    </nav>
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-16">
@@ -189,8 +212,7 @@ function Homepage() {
         </div>
       </footer>
     </div>
-
- 
+    
   );
 }
 
