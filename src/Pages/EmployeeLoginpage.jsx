@@ -27,7 +27,9 @@ const EmployeeLoginpage = () => {
         </div>
         <span className="md:text-base sm:text-sm xs:text-xs font-medium text-dark mb-10">
           Don't have an account?{" "}
-          <span className="text-secondary hover:cursor-pointer">Sign Up</span>
+          <Link to="/EmployeeSignupPage">
+            <span className="text-secondary hover:cursor-pointer">Sign Up</span>
+          </Link>
         </span>
         <form action="" className="flex flex-col mt-10 gap-4 ">
           <div className="w-full">
@@ -53,7 +55,10 @@ const EmployeeLoginpage = () => {
           <div className=" flex justify-end text-secondary hover:cursor-pointer">
             Recover password
           </div>
-          <button onClick={submitLoginForm} className=" text-white bg-black w-full py-3 rounded">
+          <button
+            onClick={submitLoginForm}
+            className=" text-white bg-black w-full py-3 rounded"
+          >
             Login
           </button>
         </form>

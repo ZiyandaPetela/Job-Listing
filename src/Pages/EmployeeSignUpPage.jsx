@@ -28,7 +28,9 @@ const EmployeeSignUpPage = () => {
         </div>
         <div className=" md:text-base sm:text-sm xs:text-xs font-medium text-dark md:mb-7 sm:mb-6 xs:mb-5">
           Have an account already?{" "}
-          <span className="text-secondary hover:cursor-pointer">Login</span>
+          <Link to="/EmployeeLoginpage">
+            <span className="text-secondary hover:cursor-pointer">Login</span>
+          </Link>
         </div>
         <form className="flex flex-col md:gap-4 sm:gap-3 xs:gap-2 xl:text-lg lg:text-base sm:text-sm xs:text-xs">
           <div>
@@ -162,7 +164,10 @@ const EmployeeSignUpPage = () => {
                 Privacy Policy.
               </span>
             </div>
-            <button onClick={submitSignUpForm} className=" text-white bg-black w-full md:py-3 sm:py-2 xs:py-3 rounded">
+            <button
+              onClick={submitSignUpForm}
+              className=" text-white bg-black w-full md:py-3 sm:py-2 xs:py-3 rounded"
+            >
               Register
             </button>
           </div>

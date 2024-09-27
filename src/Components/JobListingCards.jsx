@@ -7,12 +7,12 @@ const JobListingCards = () => {
   return (
     <div className="">
       <div className="flex justify-center items-center gap-3 text-black font-bold mb-8">
-        <div className="text-3xl">Recommended Jobs </div>
-        <div className=" text-2xl p-1 rounded-full bg-white  border border-black flex items-center justify-center w-8 h-8">
-          6
+        <div className="lg:text-3xl md:text-2xl sm:text-xl xs:text-lg">Recommended Jobs </div>
+        <div className=" lg:text-2xl md:text-xl sm:text-lg xs:text-base p-1 rounded-full bg-white  border border-black flex items-center justify-center w-8 h-8">
+          4
         </div>
       </div>
-      <div className="grid grid-cols-2 grid-rows-2 gap-10">
+      <div className="grid sm:grid-cols-2 xs:grid-cols-1 sm:grid-rows-2 xs:grid-cols-1 gap-10">
         {jobData.map((job) => {
           return (
             <div
@@ -41,7 +41,7 @@ const JobListingCards = () => {
                   <div className=" text-sm font-semibold">{job.salary}</div>
                   <div className=" text-xs text-gray-400">{job.location}</div>
                 </div>
-                <div className=" text-gray-400 text-sm bg-black  py-1 px-3 w-fit rounded-2xl font-medium hover:cursor-pointer">
+                <div className=" text-white text-sm  bg-gray-800 hover:bg-black transition-all duration-100  py-1 px-3 w-fit rounded-2xl font-normal hover:cursor-pointer">
                   Details
                 </div>
               </div>
