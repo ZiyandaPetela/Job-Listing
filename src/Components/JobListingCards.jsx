@@ -1,18 +1,25 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { showJobDetail } from "../REDUX/JobListingSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const JobListingCards = () => {
   const { jobData } = useSelector((store) => store.JobListings);
   console.log(jobData);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <div className="">
       <div className="flex justify-center items-center gap-3 text-black font-bold mb-8">
-        <div className="lg:text-3xl md:text-2xl sm:text-xl xs:text-lg">Recommended Jobs </div>
+        <div className="lg:text-3xl md:text-2xl sm:text-xl xs:text-lg">
+          Recommended Jobs{" "}
+        </div>
         <div className=" lg:text-2xl md:text-xl sm:text-lg xs:text-base p-1 rounded-full bg-white  border border-black flex items-center justify-center w-8 h-8">
           4
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 xs:grid-cols-1 sm:grid-rows-2 xs:grid-cols-1 gap-10">
+      <div className="grid sm:grid-cols-2 xs:grid-cols-1 sm:grid-rows-2  gap-10">
         {jobData.map((job) => {
           return (
             <div
@@ -41,7 +48,13 @@ const JobListingCards = () => {
                   <div className=" text-sm font-semibold">{job.salary}</div>
                   <div className=" text-xs text-gray-400">{job.location}</div>
                 </div>
-                <div className=" text-white text-sm  bg-gray-800 hover:bg-black transition-all duration-100  py-1 px-3 w-fit rounded-2xl font-normal hover:cursor-pointer">
+                <div
+                  className=" text-white text-sm  bg-gray-800 hover:bg-black transition-all duration-100  py-1 px-3 w-fit rounded-2xl font-normal hover:cursor-pointer"
+                  onClick={() => {
+                    dispatch(showJobDetail(job.id));
+                    navigate("/JobDetailPage");
+                  }}
+                >
                   Details
                 </div>
               </div>

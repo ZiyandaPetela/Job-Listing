@@ -8,20 +8,20 @@ import EmployeeProfileForm from "../src/Components/EmployeeProfileForm"; // Impo
 import EmployerProfileForm from "../src/Components/EmployerProfileForm"; // Import EmployeeProfileForm from employees.jsx
 import Application from "./Pages/Application";
 import JobListingPage from "./Pages/JobListingPage/JobListingPage";
+import JobDetailPage from "./Pages/JobListingPage/JobDetailPage";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/EmployeeLoginpage" element={<EmployeeLoginpage/>} />
-        <Route path="/EmployeeSignUpPage" element={<EmployeeSignUpPage/>} />
+        <Route path="/EmployeeLoginpage" element={<EmployeeLoginpage />} />
+        <Route path="/EmployeeSignUpPage" element={<EmployeeSignUpPage />} />
         <Route path="/Application" element={<Application />} />
-        <Route path="/EmployeeProfileForm" element={<EmployeeProfileForm/>} />
-        <Route path="/EmployerProfileForm" element={<EmployerProfileForm/>} />
-        <Route path="/JoblistingPage" element={<JobListingPage/>} />
-        
-        
+        <Route path="/EmployeeProfileForm" element={<EmployeeProfileForm />} />
+        <Route path="/EmployerProfileForm" element={<EmployerProfileForm />} />
+        <Route path="/JoblistingPage" element={<JobListingPage />} />
+        <Route path="/JobDetailPage" element={<JobDetailPage />} />
       </Routes>
     </Router>
   );
