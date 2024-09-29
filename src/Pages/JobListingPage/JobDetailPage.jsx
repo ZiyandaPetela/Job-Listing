@@ -6,7 +6,7 @@ const JobDetailPage = () => {
   const { jobDetails } = useSelector((store) => store.JobListings);
 
   return (
-    <div className="grid grid-cols-[60fr_40fr] p-6">
+    <div className="md:grid grid-cols-[60fr_40fr] p-6 xs:flex flex-col">
       <div className=" pb-5">
         <div className=" text-3xl font-bold mb-3">Role as a {jobDetails.title}</div>
         <div className=" mb-2">
