@@ -6,9 +6,9 @@ const JobDetailPage = () => {
   const { jobDetails } = useSelector((store) => store.JobListings);
 
   return (
-    <div className="md:grid grid-cols-[60fr_40fr] p-6 xs:flex flex-col">
+    <div className="lg:grid grid-cols-[60fr_40fr] p-6 xs:flex flex-col">
       <div className=" pb-5">
-        <div className=" text-3xl font-bold mb-3">Role as a {jobDetails.title}</div>
+        <div className=" md:text-3xl sm:text-2xl xs:text-xl font-bold sm:mb-3 xs:mb-2">Role as a {jobDetails.title}</div>
         <div className=" mb-2">
           <img
             src={jobDetails.image}
@@ -25,23 +25,23 @@ const JobDetailPage = () => {
           <div>{jobDetails.location}</div>
         </div>
         <div>
-          <div className="text-lg font-semibold  mb-2">Responsibility:</div>
-          <div className="leading-7 text-gray-600">{jobDetails.detail}</div>
+          <div className="md:text-lg sm:text-base font-semibold  sm:mb-2 xs:mb-1">Responsibility:</div>
+          <div className="leading-7 text-gray-600 sm:text-base xs:text-sm">{jobDetails.detail}</div>
         </div>
       </div>
-      <div className="font-semibold pt-20 px-10">
-        <div className=" text-lg">Details</div>
+      <div className="font-semibold sm:pt-20 xs:pt-8 sm:px-10 xs:px-3 sm:text-base xs:text-sm">
+        <div className=" sm:text-lg xs:text-base">Details</div>
         <div>
           <div className="flex items-center justify-between">
-            <div className=" text-gray-400 text-base">Compensation</div>
+            <div className=" text-gray-400 sm:text-base">Compensation</div>
             <div>{jobDetails.salary}</div>
           </div>
           <div className="flex items-center justify-between">
-            <div className=" text-gray-400 text-base">Employment Type</div>
+            <div className=" text-gray-400">Employment Type</div>
             <div>{jobDetails.role1}</div>
           </div>
           <div className="flex items-center justify-between">
-            <div className=" text-gray-400 text-base">Job</div>
+            <div className=" text-gray-400">Job</div>
             <div>{jobDetails.role2}</div>
           </div>
         </div>
