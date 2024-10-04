@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Link, useNavigate } from "react-router-dom";
 // import logo from "/images/logo-min-white.svg";
 // import { IoMdNotifications } from "react-icons/io";
@@ -12,12 +12,12 @@ import JobListingCards from "../../Components/JobListingCards";
 import JobListingPageNavBar from "../../Components/JobListingPageNavBar";
 // import { RxHamburgerMenu } from "react-icons/rx";
 
-
 const JobListingPage = () => {
+  const [search, setSearch] = useState("");
   return (
     <div className="">
-               {/* NAVBAR */}
-               <JobListingPageNavBar />
+      {/* NAVBAR */}
+      <JobListingPageNavBar />
       <div className="flex lg:justify-between xs:justify-center items-center xl:text-lg lg:text-sm bg-black text-accent xl:px-9 lg:px-10 xl:py-6 lg:py-5 md:py-3 sm:py-2 xs:py-1">
         <div className="flex items-center xs:hidden lg:inline-flex">
           <span>
@@ -74,8 +74,9 @@ const JobListingPage = () => {
         <div className="flex items-center gap-2">
           <div>
             <input
+              onChange={(e) => setSearch(e.target.value)}
               type="text"
-              placeholder="Search a job"
+              placeholder="Search a job(in lowercase)"
               className="lg:w-full md:w-96 sm:w-80 text-black outline-none p-1 rounded-sm"
             />
           </div>
@@ -86,7 +87,7 @@ const JobListingPage = () => {
       </div>
       <div className=" bg-white mx-auto max-w-max py-8">
         {/* ------------JOB CARDS-------------- */}
-        <JobListingCards />
+        <JobListingCards search={search} />
       </div>
     </div>
   );
