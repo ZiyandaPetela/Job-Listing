@@ -19,7 +19,7 @@ const JobListingCards = ({ search }) => {
           {jobData.length}
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 xs:grid-cols-1 sm:grid-rows-2  gap-10">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1  gap-10">
         {/* {jobData
           .filter((job) => {
             return search.toLowerCase() === ""
