@@ -2,8 +2,17 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Homepage() {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
+  // State for controlling the mobile menu toggle
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Function to toggle the menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Function to handle Apply button click
   const handleApplyClick = () => {
     navigate("/Application"); // Navigate to the application form page
   };
@@ -11,10 +20,10 @@ function Homepage() {
     e.preventDefault();
     navigate("/JoblistingPage");
   };
+
   return (
     <div className="bg-gray-100 font-sans leading-normal tracking-normal">
       {/* Navbar Section */}
-      
       <nav className="bg-black text-white p-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="text-lg font-bold">
@@ -54,7 +63,7 @@ function Homepage() {
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-16">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl font-bold mb-6">
                 Find Your Next Gig With Our Job Listing Platform.
               </h1>
@@ -94,7 +103,7 @@ function Homepage() {
             {[...Array(6)].map((_, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full max-w-sm mb-6"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full mb-6"
               >
                 <h3 className="text-xl font-bold mb-4">
                   Senior UI/UX Designer
@@ -119,7 +128,7 @@ function Homepage() {
             Streamline Your Job Search with Advanced Features
           </h2>
           <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-1/3 p-4">
+            <div className="w-full sm:w-1/2 md:w-1/3 p-4">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4">Work Experience</h3>
                 <p className="text-gray-600">
@@ -128,7 +137,7 @@ function Homepage() {
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/3 p-4">
+            <div className="w-full sm:w-1/2 md:w-1/3 p-4">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4">Skill & Expertise</h3>
                 <p className="text-gray-600">
@@ -148,7 +157,7 @@ function Homepage() {
             How Jobscout Works
           </h2>
           <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-1/3 p-4">
+            <div className="w-full sm:w-1/2 md:w-1/3 p-4">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4">
                   Create a Free Account
@@ -159,7 +168,7 @@ function Homepage() {
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/3 p-4">
+            <div className="w-full sm:w-1/2 md:w-1/3 p-4">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4">Search Jobs</h3>
                 <p className="text-gray-600">
@@ -168,7 +177,7 @@ function Homepage() {
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/3 p-4">
+            <div className="w-full sm:w-1/2 md:w-1/3 p-4">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4">Apply for Jobs</h3>
                 <p className="text-gray-600">
@@ -271,7 +280,7 @@ function Homepage() {
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
